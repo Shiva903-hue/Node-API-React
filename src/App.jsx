@@ -10,21 +10,15 @@ const App = () => {
   const itemsPerPage = 5;
 
   useEffect(() => {
-    const fetchData = async () => {
-      const [teachersRes, studentsRes] = await Promise.all([
-        fetch('http://localhost:3030/api/teachers'),
-        fetch('http://localhost:3030/api/students'),
-      ]);
-
-      const teachersData = await teachersRes.json();
-      const studentsData = await studentsRes.json();
-
-      setTeachers(teachersData);
-      setStudents(studentsData);
-    };
-
-    fetchData();
-  }, []);
+  Promise.all([
+    fetch('http://localhost:3030/api/teachers').then(res => res.json()),
+    fetch('http://localhost:3030/api/students').then(res => res.json())
+    
+  ]).then(([teachersData, studentsData]) => {
+    setTeachers(teachersData);
+    setStudents(studentsData);
+  });
+}, []);
 
   const totalPages = Math.ceil(Math.max(students.length, teachers.length) / itemsPerPage);
 
