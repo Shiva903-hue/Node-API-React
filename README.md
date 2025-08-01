@@ -14,7 +14,13 @@ A simple full-stack web app to display paginated tables of teachers and students
 ---
 
 ## 📁 Project Structure
-<pre lang="nohighlight"> ``` Teacher-student-table/ ├── dist/ # Vite build output ├── src/ # React components ├── server.js # Node.js backend server ├── vite.config.js # Vite configuration ``` </pre>
+```
+Teacher-student-table/
+├── dist/ # Vite build output
+├── src/ # React components
+├── server.js # Node.js backend server
+├── vite.config.js # Vite configuration
+```
 ---
 
 ## 🔧 Setup Instructions
