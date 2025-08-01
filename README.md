@@ -1,12 +1,57 @@
-# React + Vite
+# 📊 Teacher-Student Table App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple full-stack web app to display paginated tables of teachers and students using **React + Vite** for frontend and **pure Node.js** for backend — all served from a single server.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **Backend:** Node.js (no framework)
+- **Deployment:** Single server (no proxy)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+
+Teacher-student-table/
+├── dist/ # Vite build output
+├── src/ # React components
+├── server.js # Node.js backend server
+├── vite.config.js
+
+---
+
+## 🔧 Setup Instructions
+
+1. Install dependencies  
+   `npm install`
+
+2. Build React app  
+   `npm run build`
+
+3. Start server  
+   `node server.js`
+
+Open: `http://localhost:3030`
+
+---
+
+## 🔗 API Endpoints
+
+- `/api/students` → Returns student data  
+- `/api/teachers` → Returns teacher data  
+- `/` → Serves frontend (React app)
+
+---
+
+## ✅ Output
+
+Paginated table view of teachers and students, with data fetched from the same Node.js server.
+
+---
+
+## ✍️ Author
+
+**Shivam Waghmare**
